@@ -148,7 +148,9 @@ const Register = () => {
           <div className="signup-div">
             <button type='submit' className="signupSubmit btn btn-primary" >
               {" "}
-              {load ? <i class="fas fa-spinner fa-pulse"></i> : ""} &nbsp; Sign
+              {load ? <div class="spinner-border text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div> : ""} &nbsp; Sign
               up
             </button>
           </div>

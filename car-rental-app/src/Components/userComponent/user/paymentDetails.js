@@ -18,7 +18,9 @@ const PaymentDetails = () => {
     <>
       <div className="payment-table table-striped">
         {payments[0] === "no" || payments == [] ? (
-          <code> no payments yet <i class="fas fa-spinner fa-pulse"></i> </code>
+          <code> no payments yet/ loading please wait <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div> </code>
         ) : (
           <table class="table table-bordered">
             <tr>

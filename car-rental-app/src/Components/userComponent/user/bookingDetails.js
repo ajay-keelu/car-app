@@ -17,7 +17,9 @@ const BookingDetails = () => {
     <>
       <div className="booking-table">
         {history[0] === "no" ? (
-          <code>no bookings found <i class="fas fa-spinner fa-pulse"></i></code>
+          <code>no bookings found / loading please wait <div class="spinner-border text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div></code>
         ) : (
           <table class="table table-bordered">
             <tr>

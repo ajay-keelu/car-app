@@ -151,7 +151,9 @@ const Signup = () => {
         </div>
         <div className="signup-div">
           <button className="signupSubmit btn btn-primary" onClick={userLogin}>
-            {load ? <i class="fas fa-spinner fa-pulse"></i> : ""} &nbsp; Login
+            {load ? <div class="spinner-border text-secondary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div> : ""} &nbsp; Login
           </button>
         </div>
 

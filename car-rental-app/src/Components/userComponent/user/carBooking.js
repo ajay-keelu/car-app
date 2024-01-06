@@ -22,7 +22,7 @@ const CarBooking = ({ book, payM }) => {
       <div className="carbooking">
         <div className="car-detail">
           <div className="car-image">
-            <img src={book.image} alt={book.name} />
+            <img src={book.image} height={'100%'} width={'100%'} alt={book.name} />
           </div>
           <div className="car-table">
             <table className="table table-striped">
@@ -39,12 +39,12 @@ const CarBooking = ({ book, payM }) => {
                   }}
                 >
                   {" "}
-                  {book.liId}{" "}
+                  {book.carId}{" "}
                 </td>
               </tr>
               <tr>
                 <th>Owner Email </th>
-                <td className="data email"> {book.owEmail} </td>
+                <td className="data email"> {book.owneremail} </td>
               </tr>
               <tr>
                 <th>Price </th>

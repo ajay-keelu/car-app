@@ -64,7 +64,7 @@ const Transaction = ({ pay }) => {
       carYear: cy,
       cardCvv: cvv,
     };
-    console.log(det)
+    // console.log(det)
     // axios
     //   .post("http://localhost:1001/all/booking", {det,userEmail:localStorage.getItem('email')})
     //   .then((res) => {
@@ -149,7 +149,9 @@ const Transaction = ({ pay }) => {
                 onClick={paynow}
                 className="btn btn-primary"
               >
-                {payload ? <i class="fas fa-spinner fa-pulse"></i> : ''}
+                {payload ? <div class="spinner-border text-secondary" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> : ''}
                 PAY NOW
               </button>
               <button
@@ -157,7 +159,9 @@ const Transaction = ({ pay }) => {
                 onClick={cancel}
                 className="btn btn-danger"
               >
-                {canload ? <i class="fas fa-spinner fa-pulse"></i> : ''}
+                {canload ? <div class="spinner-border text-secondary" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> : ''}
                 CANCEL
               </button>
             </div>

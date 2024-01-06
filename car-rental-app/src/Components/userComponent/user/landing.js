@@ -182,7 +182,9 @@ const Landing = ({ method }) => {
       </div>
       <div className="carImages">
         {carlist.length === 0 ? (
-          <h3>Please Wait loading <i class="fas fa-spinner fa-pulse"></i> </h3>
+          <h3>Please Wait loading <div class="spinner-border text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div></h3>
         ) : (
           carlist.map((e) => {
             return (
