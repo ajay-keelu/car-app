@@ -67,5 +67,12 @@ const getCars = async (req, res) => {
         res.send('no auth')
     }
 }
-
-module.exports = { authOwnerLogin, addCar, getCars, authOwnerSignUp, OwnerBookings, OwnerPayments }
+const removeCar = async (req, res) => {
+    const _id = req.body._id;
+    Car.deleteMany({ _id }).then(() => {
+        res.send('success')
+    }).catch(err => {
+        res.send('fail')
+    })
+}
+module.exports = { authOwnerLogin, removeCar, addCar, getCars, authOwnerSignUp, OwnerBookings, OwnerPayments }

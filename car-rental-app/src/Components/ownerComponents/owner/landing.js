@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import axios from "axios";
 import "./landing.css";
-import ImgUser from "./carImages/user.png";
+// import ImgUser from "./carImages/user.png";
 const Landing = ({ method }) => {
   const config = {
     headers: {
@@ -98,7 +98,7 @@ const Landing = ({ method }) => {
         </div>
         <div className="secFlex">
           <div className="details">
-            <img src={ImgUser} alt={"owner"} />
+            <img src={''} alt={"owner"} />
           </div>
         </div>
       </div>

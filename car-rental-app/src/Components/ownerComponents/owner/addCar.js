@@ -4,9 +4,11 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const AddCar = () => {
+  const [load, setLoad] = useState(false);
   const navigate = useNavigate();
   const [carDetails, setCarDetails] = useState({});
   const addCarDetails = () => {
+    setLoad(true)
     for (let key in carDetails) {
       if (!carDetails.hasOwnProperty(key))
         return alert("Please Fill Up All Fields");
@@ -107,8 +109,8 @@ const AddCar = () => {
             required
           />
         </div>
-        <button className="addInput" onClick={addCarDetails}>
-          Submit
+        <button className="btn addInput" onClick={addCarDetails}>
+          {load ? <i class="fas fa-spinner fa-pulse"></i> : ""}  Submit
         </button>
       </div>
       {/* <img src={image} alt="" /> */}
